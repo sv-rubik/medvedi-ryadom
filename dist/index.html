@@ -12,6 +12,7 @@
     <link href="./styles.css" rel="stylesheet" />
     <script src="./vendor/maplibre-gl.js" defer></script>
     <script src="./app.js" defer></script>
+    <script src="./population.js" defer></script>
   </head>
   <body>
     <div class="app">
@@ -20,6 +21,8 @@
         <label class="top-search"><span class="search-symbol" aria-hidden="true">⌕</span><span class="sr-only">Найти сообщение по месту</span><input id="search" type="search" placeholder="Найти место или сообщение" autocomplete="off" /></label>
         <div class="top-actions">
           <label class="year-control" for="year"><span>Год события</span><select id="year" aria-label="Год события"></select></label>
+          <a class="top-link" href="./news.html">Новости</a>
+          <a class="top-link" href="./history.html">Архив</a>
           <button type="button" class="about-trigger" id="about-trigger" aria-expanded="false" aria-controls="about-panel">О карте</button>
         </div>
       </header>
@@ -33,6 +36,7 @@
           <label class="filter-row"><span class="legend-icon sighting" aria-hidden="true">▲</span><span>Выходы к людям</span><input type="checkbox" id="filter-sighting" checked /></label>
           <label class="filter-row"><span class="legend-icon attack" aria-hidden="true">●</span><span>Нападения</span><input type="checkbox" id="filter-attack" checked /></label>
           <div class="filter-footer" id="filter-count">Загрузка сообщений…</div>
+          <div class="population-mini"><span>Бурые медведи в России</span><svg id="population-chart" viewBox="0 0 200 36" role="img" aria-label="График численности бурого медведя в России"></svg><small id="population-label">Загрузка данных…</small></div>
         </aside>
         <div class="map-navigation"><button type="button" id="zoom-in" aria-label="Увеличить карту">+</button><button type="button" id="zoom-out" aria-label="Уменьшить карту">−</button></div>
         <section class="detail-panel" id="detail-panel" aria-label="Подробности сообщения" hidden>
@@ -46,6 +50,8 @@
           <p>Это сообщения из открытых публикаций о встречах людей с медведями и нападениях. Ссылка на публикацию и статус указаны в карточке каждого случая.</p>
           <p>Если точное место неизвестно, точка стоит в центре упомянутого населённого пункта. Она не показывает местонахождение медведя сейчас.</p>
           <p id="coverage-note">Архив с 1991 года пополняется. Отсутствие точки не означает отсутствие случаев.</p>
+          <p>Автоматически найденные точки требуют проверки места и даты события. Историю публикаций сохраняем в <a href="https://github.com/sv-rubik/medvedi-ryadom/blob/main/data/news-archive.csv" target="_blank" rel="noopener noreferrer">CSV-архиве</a>.</p>
+          <p><a href="./admin.html">Редактировать данные</a></p>
           <p class="about-updated" id="updated-at"></p>
         </section>
         <div class="bottom-drawer" aria-label="Сообщения за выбранный год">

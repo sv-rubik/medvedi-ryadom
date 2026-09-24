@@ -9,20 +9,25 @@
   const eventList = $('event-list');
   const detailPanel = $('detail-panel');
   const aboutPanel = $('about-panel');
-  const currentYear = Number(new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Moscow', year: 'numeric' }).format(new Date()));
   const state = { events: [], selectedId: null, map: null, mapReady: false };
+  const dataBase = location.hostname.endsWith('chatgpt.site') ? 'https://sv-rubik.github.io/medvedi-ryadom/' : './';
 
   const allOption = document.createElement('option');
   allOption.value = 'all';
   allOption.textContent = 'Все годы';
   yearSelect.append(allOption);
-  for (let year = currentYear; year >= 1991; year -= 1) {
-    const option = document.createElement('option');
-    option.value = String(year);
-    option.textContent = String(year);
-    yearSelect.append(option);
+
+  function populateYears() {
+    yearSelect.querySelectorAll('option:not([value="all"])').forEach((option) => option.remove());
+    const years = [...new Set(state.events.map((event) => event.eventDate.slice(0, 4)))].sort().reverse();
+    years.forEach((year) => {
+      const option = document.createElement('option');
+      option.value = year;
+      option.textContent = year;
+      yearSelect.append(option);
+    });
+    yearSelect.value = years[0] || 'all';
   }
-  yearSelect.value = String(currentYear);
 
   const formatDate = (date) => new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(date + 'T12:00:00Z'));
   const typeLabel = (type) => type === 'attack' ? 'Нападение' : 'Выход к людям';
@@ -71,7 +76,7 @@
     date.textContent = formatDate(event.eventDate);
     const label = document.createElement('p');
     label.className = 'detail-small';
-    label.textContent = 'Дата события';
+    label.textContent = event.dateBasis === 'publication' ? 'Дата публикации; дата происшествия требует проверки' : 'Дата события';
     const summary = document.createElement('p');
     summary.className = 'detail-summary';
     summary.textContent = event.summary;
@@ -95,6 +100,17 @@
     link.rel = 'noopener noreferrer';
     link.textContent = event.source + ' ↗';
     row('Источник', link);
+    if (Array.isArray(event.additionalSources)) {
+      event.additionalSources.forEach((source) => {
+        if (!/^https:\/\//.test(source.sourceUrl)) return;
+        const extraLink = document.createElement('a');
+        extraLink.href = source.sourceUrl;
+        extraLink.target = '_blank';
+        extraLink.rel = 'noopener noreferrer';
+        extraLink.textContent = source.source + ' ↗';
+        row('Также', extraLink);
+      });
+    }
     const precision = document.createElement('p');
     precision.className = 'precision-note';
     precision.textContent = event.precision;
@@ -241,7 +257,7 @@
     }
   });
 
-  fetch('./events.json', { cache: 'no-cache' }).then((response) => {
+  fetch(dataBase + 'events.json', { cache: 'no-cache' }).then((response) => {
     if (!response.ok) throw new Error('No event data');
     return response.json();
   }).then((data) => {
@@ -250,6 +266,7 @@
       Number.isFinite(event.longitude) && Number.isFinite(event.latitude) &&
       /^https:\/\//.test(event.sourceUrl)
     );
+    populateYears();
     $('coverage-note').textContent = data.coverageNote;
     $('updated-at').textContent = 'Данные обновлены: ' + formatDate(data.updatedAt.slice(0, 10));
     render();

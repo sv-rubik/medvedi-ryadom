@@ -43,3 +43,6 @@ next-env.d.ts
 /.codex/
 /outputs/
 /work/
+/.deps/
+__pycache__/
+*.pyc
