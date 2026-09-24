@@ -32,6 +32,7 @@ class DataPipelineTests(unittest.TestCase):
         events = json.loads((ROOT / 'dist' / 'events.json').read_text(encoding='utf-8'))['events']
         ids = {item['id'] for item in events}
         self.assertEqual(len(ids), len(events))
+        self.assertEqual(sum(item['id'].startswith('curated-split-') for item in events), 6)
         supplied = list(rows())
         self.assertEqual(len(supplied), 79)
         for raw_date, location, summary, _ in supplied:
@@ -43,6 +44,8 @@ class DataPipelineTests(unittest.TestCase):
                    and item['eventDate'] == '2026-09-24' and item['type'] == 'attack']
         self.assertEqual(len(vologda), 1)
         self.assertIn('vologdaregion.ru', vologda[0]['sourceUrl'])
+        archive = json.loads((ROOT / 'dist' / 'history.json').read_text(encoding='utf-8'))['records']
+        self.assertTrue(all(item.get('mappedEventId') in ids for item in archive if item.get('mappedEventId')))
 
 
 if __name__ == '__main__':

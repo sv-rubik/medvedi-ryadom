@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T19:38:21+00:00",
+  "updatedAt": "2026-09-24T19:56:46+00:00",
   "coverageNote": "Карта пополняется по публикациям и пользовательскому списку. Для части точек место и дата предварительные; полнота архива не гарантируется.",
   "events": [
     {
@@ -804,8 +804,8 @@
       "latitude": 57.1914882,
       "precision": "Метка поставлена по названию места «Камчатка / район границы с Чукоткой». Точные координаты происшествия не установлены.",
       "status": "Из пользовательского списка; детали требуют сверки с публикацией",
-      "source": "Газета Metro Москва",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPRjBtMHZVS1BKQ1dyR3YxWnA0cDFDRkN6bk9uZTNtdWl0Wjl5QUFsYi11Y1kzVzhTUVB6VURiME9lTWIwUEt3LXVZUUkzZVR2ZVdTaW9udC1Hak53bGZUdnI1bUFoak5xUk8zNGlPdEllNjNlYS1kY2UyazVuMTdnS3gzSFBvci1pOXlENHphendGNkxSWnN4OU9NZVRIMGZ4OWpOZ213UzhRbmRGTVZTcQ?oc=5"
+      "source": "РБК",
+      "sourceUrl": "https://www.rbc.ru/society/15/09/2026/6aa937759a7947f752018767"
     },
     {
       "id": "auto-41117fbb43650a24",
@@ -929,13 +929,13 @@
       "place": "Красноярский край",
       "region": "Красноярский край",
       "title": "Красноярский край: нападение медведя",
-      "summary": "Медведь проник в жилой дом и вытащил женщину через окно; нападение закончилось гибелью человека.",
+      "summary": "В ночь на 16 сентября медведь напал на 66-летнюю жительницу деревни Верхний Кебеж Ермаковского округа. Женщина погибла возле дома. Следователи выясняют обстоятельства; версия о том, что медведь вытащил её через окно, не подтверждена.",
       "longitude": 97.0979974,
       "latitude": 63.3233807,
       "precision": "Метка поставлена по названию места «Красноярский край». Точные координаты происшествия не установлены.",
-      "status": "Из пользовательского списка; детали требуют сверки с публикацией",
-      "source": "Поиск источника",
-      "sourceUrl": "https://news.google.com/search?q=%D0%BC%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D1%8C%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D1%8F%D1%80%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D1%80%D0%B0%D0%B9%202026",
+      "status": "Сверено с региональным сообщением; точное место требует проверки",
+      "source": "Вести. Красноярск",
+      "sourceUrl": "https://www.vesti-krasnoyarsk.ru/news/proisshestviya/post-61613/",
       "additionalSources": [
         {
           "source": "vtomske.ru",
@@ -990,6 +990,22 @@
       "status": "Автоматически найдено в архиве; текст и дата события не проверены",
       "source": "Дзен",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFAwbkVpNTMwdE51OEdMMnZ1SXNtRTA0N1B5MVZjV1VMMDloYS1tUTN3UmhPRGpTVml3bHdOZjgzcEN4ZG1ySDQwbWtB?oc=5"
+    },
+    {
+      "id": "curated-split-c6b356c1c2d901bb",
+      "type": "sighting",
+      "eventDate": "2026-09-07",
+      "dateBasis": "event",
+      "place": "Республика Бурятия",
+      "region": "Республика Бурятия",
+      "title": "Второе нападение медведя в Бурятии 7 сентября",
+      "summary": "В сводке РБК отмечены отдельные нападения медведей в Бурятии 6 и 7 сентября. Место второго случая в этой сводке не уточнено.",
+      "longitude": 109.492143,
+      "latitude": 52.7182426,
+      "precision": "Приблизительная метка по названию «Республика Бурятия»; точные координаты неизвестны.",
+      "status": "Отдельный случай из сгруппированного сообщения; детали требуют проверки",
+      "source": "РБК",
+      "sourceUrl": "https://www.rbc.ru/society/15/09/2026/6aa937759a7947f752018767"
     },
     {
       "id": "curated-083a5b9439cfd222",
@@ -1073,8 +1089,8 @@
       "latitude": 51.4017149,
       "precision": "Метка поставлена по названию места «Республика Тыва». Точные координаты происшествия не установлены.",
       "status": "Из пользовательского списка; детали требуют сверки с публикацией",
-      "source": "Интерфакс",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBVWHl4VG5FMzBabGNiOEVhbEdRVjZHNHB5cjg1SV9mUEkzV2p4amRhaGFBQ0p3S0NjQk5OeU5mVVN0ak5UWmJmRzNiTmU2VjDSAUtBVV95cUxNVHBiZVMyeGZEQ0l1M0wzQjZHa21aTkhxeGVvelRsVS14ekh3OE1BWW1tRkVMUlAyU2VkdThuTW9zcG1wak5Fa0plWjg?oc=5"
+      "source": "РБК",
+      "sourceUrl": "https://www.rbc.ru/society/15/09/2026/6aa937759a7947f752018767"
     },
     {
       "id": "curated-921c2fd5b6f4e2eb",
@@ -1173,6 +1189,38 @@
       "status": "Автоматически найдено в архиве; текст и дата события не проверены",
       "source": "Реальный Тагил",
       "sourceUrl": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOcTJ3WWZVbjNvWDI2MVQzN3RBbnhrbmdDbTZ4dWZIbXdlWW5nM2otb1lEamZLS2dqb1hFNjliSndoUDRCRjl6RnNLQlVTWFNZcnhxYkZjTVpSVU5FZ183ZjF1djRMYklYbWxZOEZTYjhyZEhKS2tDbkFyMGhFZnAtc0E0RTZzazFFd2Z3UklYcHlXVEYxckE?oc=5"
+    },
+    {
+      "id": "curated-split-be0c15d3f19f48cf",
+      "type": "attack",
+      "eventDate": "2026-08-31",
+      "dateBasis": "event",
+      "place": "Хатырка",
+      "region": "Чукотский автономный округ",
+      "title": "Медведь напал на двух охотников у границы Камчатки и Чукотки",
+      "summary": "РБК сообщает о нападении на двух охотников в районе села Хатырка 31 августа. Точное место на границе регионов не установлено.",
+      "longitude": 175.288736,
+      "latitude": 62.0621229,
+      "precision": "Приблизительная метка по названию «Хатырка, Чукотский автономный округ»; точные координаты неизвестны.",
+      "status": "Отдельный случай из сгруппированного сообщения; детали требуют проверки",
+      "source": "РБК",
+      "sourceUrl": "https://www.rbc.ru/society/15/09/2026/6aa937759a7947f752018767"
+    },
+    {
+      "id": "curated-split-38b52143647346fc",
+      "type": "attack",
+      "eventDate": "2026-08-31",
+      "dateBasis": "event",
+      "place": "Подтёсово",
+      "region": "Красноярский край",
+      "title": "У Подтёсово погибли две сборщицы грибов",
+      "summary": "По предварительным данным Следственного комитета, две жительницы Подтёсово 31 августа ушли за грибами и не вернулись. 2 сентября их тела обнаружили в лесу с повреждениями, характерными для нападения медведя.",
+      "longitude": 92.090935,
+      "latitude": 58.604252,
+      "precision": "Приблизительная метка по названию «Подтёсово, Красноярский край»; точные координаты неизвестны.",
+      "status": "Отдельный случай из сгруппированного сообщения; детали требуют проверки",
+      "source": "Интерфакс",
+      "sourceUrl": "https://m.interfax.ru/1112874"
     },
     {
       "id": "auto-00c2481a2e8e2a52",
@@ -1711,8 +1759,8 @@
       "latitude": 52.6510546,
       "precision": "Метка поставлена по названию места «Абаза, Хакасия». Точные координаты происшествия не установлены.",
       "status": "Из пользовательского списка; детали требуют сверки с публикацией",
-      "source": "shansonline.ru",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOMUlaR3IwekFXNU9nT3NRZW9kMzZhaTJ0dS1HNFAzS0l0Z01EaFRRbTZTaDlXWmRhejY4UVJUNGNEZjN0X2MzMERzMEY4Wkd5RmhpX1g1aHFfdVpIVF96b1dGX0NDY3B4UHdwVkE1c19aaWRBdWFSNjdqSkpWb05ZQ2Zub0FIZmNiR1ozNjFBUkJkRE1iWTNpVEwtbXI4dlBNRVE5MzMxOHZzdjdUbUJtdWtyNmFTSTctVnpGYWNmb1NQeUl6UC1OOGlibTY4QQ?oc=5"
+      "source": "МВД Медиа",
+      "sourceUrl": "https://mvdmedia.ru/news/obshchestvo/v-khakasii-dlya-zashchity-zhiteley-abazy-ot-nashestviya-medvedey-zadeystvovana-bespilotnaya-aviatsiya/"
     },
     {
       "id": "auto-eb08d642aedecc8a",
@@ -3056,8 +3104,8 @@
       "latitude": 47.0411143,
       "precision": "Метка поставлена по названию места «Холмский район, Сахалин». Точные координаты происшествия не установлены.",
       "status": "Из пользовательского списка; детали требуют сверки с публикацией",
-      "source": "Интерфакс",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5UMmdGWWVreXlMRVNBQVdCT0thN3E0dTktaTFOYThheldDN0hib3VUSi0tYm5jSGlRUGJTZnZRSzE4cmNVcHdXYkk0RkhGbknSAUtBVV95cUxPX3dwUUhhNDhoVmlaclFLS1k4czE4SHgybFpaX2hOamlOejhQNnNMXzctYnVVdEZYVmFxQWxrLUxCVlBxWjh5b0lTZG8?oc=5"
+      "source": "АСТВ",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQODVELWU5RFZrRXprcjg1aTgtM2FPVGlqVlIzUDJNaXFsbkJBdW1lMEFpVmFNWmVqcFlLa1JmenBsRHRwQksycnh3U21YaklUSjg0ejN5a0wtRFlKdWdSVGZ0SUZENzRqbVdNQ0NBSVNoVWJNSDR1OVNOSEZRYUZJRlliQmo5dlN2SkFCMUJraGt0bGlxNDJFRmlR?oc=5"
     },
     {
       "id": "auto-08bcf3a8f0d38076",
@@ -3730,8 +3778,8 @@
       "latitude": 45.0819456,
       "precision": "Метка поставлена по названию места «Приморский край». Точные координаты происшествия не установлены.",
       "status": "Из пользовательского списка; детали требуют сверки с публикацией",
-      "source": "Новости Владивостока на VL.ru",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9oUV9xdUxpX2p4RXBYVkRrWXNVcEpnaWlWamt0amh4d3BjaU9sZHN0YUloekFxX2hzMXA0QTdQLTBSM3VCZzE2ZjFMN0pKSGYzNXZ5ZHFiWHJVMmFhb01R?oc=5"
+      "source": "Поиск источника",
+      "sourceUrl": "https://news.google.com/search?q=%D0%BC%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D1%8C%20%D0%9F%D1%80%D0%B8%D0%BC%D0%BE%D1%80%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D1%80%D0%B0%D0%B9%202024"
     },
     {
       "id": "curated-822567a78e8c2c55",
@@ -3992,8 +4040,8 @@
       "latitude": 53.0155966,
       "precision": "Метка поставлена по названию места «Елизовский район, Камчатка». Точные координаты происшествия не установлены.",
       "status": "Из пользовательского списка; детали требуют сверки с публикацией",
-      "source": "kamtoday.ru",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPckFxZ1hsSVpHX2Z4T19XcjFuYjVRbHVmTnB6U3BlYmQ2bXJHTkNuMzlNTFgwQkNJNHg1NUpUMUQteWw3YVhFaWF5aGlMREdLb3FJOHVTV21JajRaLS1xTkpvOThTMUJRaWllNG5ZYVY5eVhxM0Vwb2NudG1BZTNuUnA1NTFVSnJ3ZTN3cUJvX1NpME5oYVN3SUZKOUU1OTF0MWg4?oc=5"
+      "source": "Поиск источника",
+      "sourceUrl": "https://news.google.com/search?q=%D0%BC%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D1%8C%20%D0%95%D0%BB%D0%B8%D0%B7%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%2C%20%D0%9A%D0%B0%D0%BC%D1%87%D0%B0%D1%82%D0%BA%D0%B0%202024"
     },
     {
       "id": "auto-0a1847ff64963a55",
@@ -4199,8 +4247,24 @@
       "latitude": 53.981197,
       "precision": "Метка поставлена по названию места «с. Анга и дер. Юшина, Качугский район, Иркутская область». Точные координаты происшествия не установлены.",
       "status": "Из пользовательского списка; детали требуют сверки с публикацией",
-      "source": "Твой Иркутск",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9mQjJTZjVNN1hfQ1FOTEFQRDZaWVZtYXAwZGo3cDc2dkVMVFZyMWdjRVdwbjN0dnViT20xcURmclZaRmFnSnV3ZjdJelVlWURo?oc=5"
+      "source": "Поиск источника",
+      "sourceUrl": "https://news.google.com/search?q=%D0%BC%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D1%8C%20%D1%81.%20%D0%90%D0%BD%D0%B3%D0%B0%20%D0%B8%20%D0%B4%D0%B5%D1%80.%20%D0%AE%D1%88%D0%B8%D0%BD%D0%B0%2C%20%D0%9A%D0%B0%D1%87%D1%83%D0%B3%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%2C%20%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%202024"
+    },
+    {
+      "id": "curated-split-ad65e6aa8e831b29",
+      "type": "sighting",
+      "eventDate": "2024-06-06",
+      "dateBasis": "unverified",
+      "place": "Юшина",
+      "region": "Иркутская область",
+      "title": "Медведь вышел у деревни Юшина",
+      "summary": "В присланном списке отдельно упомянут выход медведя в районе деревни Юшина в тот же день, когда зверя заметили у села Анга. Подробности и точное место требуют проверки.",
+      "longitude": 106.231598,
+      "latitude": 53.877907,
+      "precision": "Приблизительная метка по названию «Юшина, Иркутская область»; точные координаты неизвестны.",
+      "status": "Отдельный случай из сгруппированного сообщения; детали требуют проверки",
+      "source": "Поиск источника",
+      "sourceUrl": "https://news.google.com/search?q=%D0%BC%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D1%8C%20%D0%AE%D1%88%D0%B8%D0%BD%D0%B0%2C%20%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%202024"
     },
     {
       "id": "auto-89bac5d8c585b09f",
@@ -5317,6 +5381,22 @@
       "sourceUrl": "https://news.google.com/search?q=%D0%BC%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D1%8C%20%D0%91%D0%B0%D0%B4%D0%B0%D1%80%D0%BC%D0%B8%D0%BD%D1%81%D0%BA%20%D0%B8%20%D0%9F%D0%BE%D0%BC%D0%BE%D1%80%D1%86%D0%B5%D0%B2%D0%B0%2C%20%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%202022"
     },
     {
+      "id": "curated-split-62d3636a4c44fec8",
+      "type": "sighting",
+      "eventDate": "2022-05-06",
+      "dateBasis": "unverified",
+      "place": "Поморцева",
+      "region": "Иркутская область",
+      "title": "Медведь вышел к домам у деревни Поморцева",
+      "summary": "В присланном списке отдельно упомянут выход медведя к частным домам у деревни Поморцева. Подробности и точное место требуют проверки.",
+      "longitude": 102.802681,
+      "latitude": 52.818783,
+      "precision": "Приблизительная метка по названию «Поморцева, Иркутская область»; точные координаты неизвестны.",
+      "status": "Отдельный случай из сгруппированного сообщения; детали требуют проверки",
+      "source": "Поиск источника",
+      "sourceUrl": "https://news.google.com/search?q=%D0%BC%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D1%8C%20%D0%9F%D0%BE%D0%BC%D0%BE%D1%80%D1%86%D0%B5%D0%B2%D0%B0%2C%20%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%202022"
+    },
+    {
       "id": "auto-2dbb44f5a6569aa2",
       "type": "attack",
       "eventDate": "2022-05-05",
@@ -5599,8 +5679,8 @@
       "latitude": 63.3233807,
       "precision": "Метка поставлена по названию места «озеро Медвежье, парк «Ергаки», Красноярский край». Точные координаты происшествия не установлены.",
       "status": "Из пользовательского списка; детали требуют сверки с публикацией",
-      "source": "Интерфакс",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE4yVGNsQ0ttR3NFUzhTX3BRWWZlTmZqUVBFRjVBbWRBcHpGVWdtYTJramFjTTF6cU50ZklCeW9RUU16WmF6bHJyWDZqQVZpQdIBSkFVX3lxTE9QNUp0bUJuVEt6NzNhOGREMWhMY055YnNJOUZTMkx5TEk3N1NINUdlX2RXd3ZUWkZBR2xGZVJPcjNZRmlGLUlJczRR?oc=5"
+      "source": "life.ru",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE00M1lsazQ2SGFsSVpJOWRsSllRZVJtcHRUaW8tbEZCbFJ2ckdGM0tjOGdDajBWcV83WU1CTzNB?oc=5"
     },
     {
       "id": "curated-b878f1712b3e9a56",
@@ -6437,6 +6517,22 @@
       "status": "Из пользовательского списка; детали требуют сверки с публикацией",
       "source": "Поиск источника",
       "sourceUrl": "https://news.google.com/search?q=%D0%BC%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D1%8C%201%2C5%20%D0%BA%D0%BC%20%D0%BE%D1%82%20%D1%81.%20%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%2C%20%D0%9C%D0%B0%D0%BA%D0%B0%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%2C%20%D0%A1%D0%B0%D1%85%D0%B0%D0%BB%D0%B8%D0%BD%202017"
+    },
+    {
+      "id": "curated-split-acd81b4eacfb016e",
+      "type": "attack",
+      "eventDate": "2017-08-29",
+      "dateBasis": "unverified",
+      "place": "Лесосибирск",
+      "region": "Красноярский край",
+      "title": "Медведь ранил мужчину в Лесосибирске",
+      "summary": "В присланном списке случай в Лесосибирске указан отдельно от выходов медведя в Подтёсово. Мужчина получил тяжёлые ранения; точная дата требует проверки.",
+      "longitude": 92.5078354,
+      "latitude": 58.2165271,
+      "precision": "Приблизительная метка по названию «Лесосибирск, Красноярский край»; точные координаты неизвестны.",
+      "status": "Отдельный случай из сгруппированного сообщения; детали требуют проверки",
+      "source": "Поиск источника",
+      "sourceUrl": "https://news.google.com/search?q=%D0%BC%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D1%8C%20%D0%9B%D0%B5%D1%81%D0%BE%D1%81%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA%2C%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D1%8F%D1%80%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D1%80%D0%B0%D0%B9%202017"
     },
     {
       "id": "curated-27bcd9e9a9fc1472",

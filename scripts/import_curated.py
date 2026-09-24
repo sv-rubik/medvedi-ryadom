@@ -104,12 +104,21 @@ def words(value):
             if word[:6] not in STOP}
 
 
-def source_for(location, summary, year, archive):
+def source_for(location, summary, year, archive, event_date=None, date_basis=None):
     terms = words(location + ' ' + summary)
     place_terms = words(location)
     ranked = []
     for item in archive:
         if item['publishedAt'][:4] != str(year):
+            continue
+        if event_date and date_basis in ('event', 'range'):
+            if abs((datetime.fromisoformat(item['publishedAt']) - datetime.fromisoformat(event_date)).days) > (21 if date_basis == 'range' else 10):
+                continue
+        if event_date and date_basis == 'month' and item['publishedAt'][:7] != event_date[:7]:
+            continue
+        if re.search(r'Тув|Тыв', location, re.I) and not re.search(r'Тув|Тыв|Енисе|Тодж', item['title'], re.I):
+            continue
+        if ATTACK.search(summary) and not ATTACK.search(item['title']):
             continue
         head = words(item['title'])
         place_overlap = len(place_terms & head)
@@ -195,7 +204,7 @@ def main():
             unlocated += 1
             CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
             continue
-        article, score = source_for(location, summary, int(date[:4]), archive)
+        article, score = source_for(location, summary, int(date[:4]), archive, date, date_basis)
         if article:
             source_url = article['sourceUrl']
             source_name = article['source']
