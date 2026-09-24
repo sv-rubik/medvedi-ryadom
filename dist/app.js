@@ -9,7 +9,7 @@
   const eventList = $('event-list');
   const detailPanel = $('detail-panel');
   const aboutPanel = $('about-panel');
-  const state = { events: [], selectedId: null, map: null, mapReady: false };
+  const state = { events: [], selectedId: null, visibleCount: 80, map: null, mapReady: false };
   const dataBase = location.hostname.endsWith('chatgpt.site') ? 'https://sv-rubik.github.io/medvedi-ryadom/' : './';
 
   const allOption = document.createElement('option');
@@ -26,7 +26,7 @@
       option.textContent = year;
       yearSelect.append(option);
     });
-    yearSelect.value = years[0] || 'all';
+    yearSelect.value = 'all';
   }
 
   const formatDate = (date) => new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(date + 'T12:00:00Z'));
@@ -76,7 +76,12 @@
     date.textContent = formatDate(event.eventDate);
     const label = document.createElement('p');
     label.className = 'detail-small';
-    label.textContent = event.dateBasis === 'publication' ? 'Дата публикации; дата происшествия требует проверки' : 'Дата события';
+    label.textContent = ({
+      publication: 'Дата публикации; дата происшествия требует проверки',
+      month: 'Известны только месяц и год; день на карте условный',
+      year: 'Известен только год; месяц и день на карте условные',
+      range: 'Начало указанного периода; точный день требует проверки'
+    })[event.dateBasis] || 'Дата события';
     const summary = document.createElement('p');
     summary.className = 'detail-summary';
     summary.textContent = event.summary;
@@ -133,7 +138,7 @@
       eventList.append(empty);
       return;
     }
-    events.slice(0, 80).forEach((event) => {
+    events.slice(0, state.visibleCount).forEach((event) => {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'event-card' + (state.selectedId === event.id ? ' selected' : '');
@@ -155,6 +160,17 @@
       button.addEventListener('click', () => showDetail(event, true));
       eventList.append(button);
     });
+    if (events.length > state.visibleCount) {
+      const more = document.createElement('button');
+      more.type = 'button';
+      more.className = 'event-card';
+      more.textContent = `Показать ещё (${events.length - state.visibleCount})`;
+      more.addEventListener('click', () => {
+        state.visibleCount += 80;
+        renderCards(events);
+      });
+      eventList.append(more);
+    }
   }
 
   function render() {
@@ -228,6 +244,10 @@
         map.on('mouseleave', layer, () => { map.getCanvas().style.cursor = ''; });
       });
       updateMap(filteredEvents());
+      if (state.selectedId) {
+        const selected = state.events.find((item) => item.id === state.selectedId);
+        if (selected) map.flyTo({ center: [selected.longitude, selected.latitude], zoom: 6, essential: true });
+      }
     });
     map.on('error', (event) => {
       if (!state.mapReady) {
@@ -237,8 +257,8 @@
     });
   }
 
-  ['year', 'filter-sighting', 'filter-attack'].forEach((id) => $(id).addEventListener('change', render));
-  searchInput.addEventListener('input', render);
+  ['year', 'filter-sighting', 'filter-attack'].forEach((id) => $(id).addEventListener('change', () => { state.visibleCount = 80; render(); }));
+  searchInput.addEventListener('input', () => { state.visibleCount = 80; render(); });
   $('zoom-in').addEventListener('click', () => state.map && state.map.zoomIn());
   $('zoom-out').addEventListener('click', () => state.map && state.map.zoomOut());
   $('close-detail').addEventListener('click', () => { detailPanel.hidden = true; state.selectedId = null; renderCards(filteredEvents()); });
@@ -270,6 +290,8 @@
     $('coverage-note').textContent = data.coverageNote;
     $('updated-at').textContent = 'Данные обновлены: ' + formatDate(data.updatedAt.slice(0, 10));
     render();
+    const requestedId = new URLSearchParams(location.search).get('event');
+    if (requestedId) showDetail(state.events.find((item) => item.id === requestedId), true);
   }).catch(() => {
     eventList.replaceChildren();
     const empty = document.createElement('div');

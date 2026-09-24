@@ -35,8 +35,16 @@
       link.textContent = item.title;
       h2.append(link);
       const summary = document.createElement('p');
-      summary.textContent = item.summary;
+      summary.textContent = item.mappedEventId && item.summary.startsWith('Заголовок найден в архиве')
+        ? 'Публикация привязана к приблизительному месту на карте. Дата самого происшествия и полный текст требуют проверки.'
+        : item.summary;
       card.append(meta, h2, summary);
+      if (item.mappedEventId) {
+        const mapLink = document.createElement('a');
+        mapLink.href = './index.html?event=' + encodeURIComponent(item.mappedEventId);
+        mapLink.textContent = 'Показать на карте →';
+        card.append(mapLink);
+      }
       list.append(card);
     }
     if (filtered.length > 300) {

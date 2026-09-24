@@ -33,6 +33,9 @@ jobs:
       - name: Search indexed reports for today
         if: github.event_name != 'push'
         run: python scripts/collect_history.py
+      - name: Add locatable indexed incidents to the map
+        if: github.event_name != 'push'
+        run: python scripts/promote_history.py
       - name: Archive report versions
         run: python scripts/export_archive.py
       - name: Save discovered publications and archive
