@@ -166,7 +166,7 @@
   }
 
   async function initializeMap() {
-    if (!window.maplibregl || !window.maplibregl.supported()) throw new Error('Map rendering is unavailable');
+    if (!window.maplibregl) throw new Error('Map rendering is unavailable');
     const response = await fetch('https://tiles.openfreemap.org/styles/dark');
     if (!response.ok) throw new Error('Map style could not be loaded');
     const style = removeBorders(await response.json());
