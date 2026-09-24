@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T19:56:46+00:00",
+  "updatedAt": "2026-09-24T23:33:46+00:00",
   "coverageNote": "Карта пополняется по публикациям и пользовательскому списку. Для части точек место и дата предварительные; полнота архива не гарантируется.",
   "events": [
     {
@@ -85,6 +85,10 @@
         {
           "source": "saomos.news",
           "sourceUrl": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOa1dkQXlHekh0eGVkYWtoY2ctY0dGbEtfVTB4MEF3ZC1DbEVyQk0zSjFMMkVZTW1YRnhwcXd1emxmQmFpajduaWVZdFNnTmxQS3c2ZVh2djZ5YUtBNUFqdGlzeUExc3JwY1J4SlE5dkk3dUozYWN5Nk1uWjVXTjd2dmRwbw?oc=5"
+        },
+        {
+          "source": "СеверИнфо",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNeko0TzFYUWk2MXZwNFF6cVd5bkhBbC1DTW5ZV0FQVUVvRDNvdkkybnMwdEsxa2xHZmhCMi1xMjZTNFRBWlpuNWtvLTFpMVBZMU5WbUFtT3Z6TlFaT0J2SW5sSjNhd29Mcjl3SzNKTnA4REFGRG5XdDJWZGFLQ2hVTTU2UEoxREk4ckUzdGFPZjNLamxEX3JNSWtsOHNUWUwyRkhManMwaDNSRnR5VmhKeEFQTHNkU2lVemxSWXpEODRkSGNETy1oM2VYdk5rSUZmaTBUVEZJX2lTcUJpalVvaG9SX2xyU1ZkUW55OGtmR0NXUQ?oc=5"
         }
       ]
     },
@@ -219,6 +223,22 @@
       "status": "Автоматически найдено в архиве; текст и дата события не проверены",
       "source": "dzen.ru",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE91NEVNNWprc1B4Y3VzZkFQVGNJSzVJSFFvNmg4eEJ0YmMzZ3hVeFhNSTVCeDJiR0llRzRleko5NkdGbmdBbEJwaFJn?oc=5"
+    },
+    {
+      "id": "auto-507cb62259f45201",
+      "type": "attack",
+      "eventDate": "2026-09-24",
+      "dateBasis": "publication",
+      "place": "Вологодская область",
+      "region": "Вологодская область",
+      "title": "В Вологодской области мужчина погиб после нападения медведя",
+      "summary": "В индексе новостей опубликован заголовок: «В Вологодской области мужчина погиб после нападения медведя». Полный текст публикации недоступен; обстоятельства и дата самого происшествия требуют проверки по ссылке.",
+      "longitude": 43.1215213,
+      "latitude": 60.0391461,
+      "precision": "Метка поставлена по названию «Вологодская область»; точное место происшествия не установлено.",
+      "status": "Автоматически найдено в архиве; текст и дата события не проверены",
+      "source": "dzen.ru",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9ua1pzdjJxelBqcmMxd2dCeWdJYnNuMXJ6d2lsY1lvcHhNN19adjVWVEpBVy1QeWkyTExIcGhOWHB5VHV2Mkp6aU9B?oc=5"
     },
     {
       "id": "auto-9f498e6d205a9c54",
@@ -736,6 +756,22 @@
       "status": "Автоматически найдено в архиве; текст и дата события не проверены",
       "source": "360.ru",
       "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOcnJRZXE1ckttTXY0TTJDTHljXzNzbG9nSnRCRWpsbF9tMEFTR2Z6OTljRHYtaWVVWmJzWEtSaERlZnF6LXQwd25XYjlsQ2xtZ2FhemtxLWVRVjRTU1hBblBzejVCTFhTMHhjUENscEl6VXdPRGFDU0JOeGVsb013LWZPX09VcDRtcVRibmxOQ1ZRRlRKcHRBQg?oc=5"
+    },
+    {
+      "id": "auto-749b664fc86204f3",
+      "type": "sighting",
+      "eventDate": "2026-09-22",
+      "dateBasis": "publication",
+      "place": "Южно-Сахалинск",
+      "region": "Сахалинская область",
+      "title": "Медведя отстрелили после выхода к СНТ в Южно-Сахалинске",
+      "summary": "В индексе новостей опубликован заголовок: «Медведя отстрелили после выхода к СНТ в Южно-Сахалинске». Полный текст публикации недоступен; обстоятельства и дата самого происшествия требуют проверки по ссылке.",
+      "longitude": 142.727438,
+      "latitude": 46.9574273,
+      "precision": "Метка поставлена по названию «Южно-Сахалинск»; точное место происшествия не установлено.",
+      "status": "Автоматически найдено в архиве; текст и дата события не проверены",
+      "source": "АСТВ",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRHhoSE5vd2hlVUZBUVFVb3pOS2dVN3ZjN0R4SExCcWRRVmI1amxnZElsZlQ3d3N2Y3BSX25wamktZW5FTjNMVG05c2RrYjU3ZjU2RGgxaXJ2MlFoWjlfTFlrMVpUamd0ZE9YLW1lZ21KTzR5Y2JRTFJsSzZNcFRndkZtQ1FkUmFzUHlnUk1EMnppdk0yS3EyMlkzN3A3UVZf?oc=5"
     },
     {
       "id": "auto-5ed0c857f44cf6e6",
@@ -2951,6 +2987,22 @@
       "status": "Автоматически найдено в архиве; текст и дата события не проверены",
       "source": "Сибирское Агентство Новостей",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5KVzllV1FfYnl3bmlsd194QmQ3am42bU5pVGV6Qkw2STh5Y05zVE5rX3dtZTQwTkJEWFhTaDd5czVVREN5TXVSWFRB?oc=5"
+    },
+    {
+      "id": "auto-a8c064c659478923",
+      "type": "sighting",
+      "eventDate": "2025-09-26",
+      "dateBasis": "publication",
+      "place": "Петропавловск-Камчатский",
+      "region": "Камчатский край",
+      "title": "Режим повышенной готовности введен в Петропавловске-Камчатском из-за выхода медведей",
+      "summary": "В индексе новостей опубликован заголовок: «Режим повышенной готовности введен в Петропавловске-Камчатском из-за выхода медведей». Полный текст публикации недоступен; обстоятельства и дата самого происшествия требуют проверки по ссылке.",
+      "longitude": 158.6471356,
+      "latitude": 53.0199838,
+      "precision": "Метка поставлена по названию «Петропавловск-Камчатский»; точное место происшествия не установлено.",
+      "status": "Автоматически найдено в архиве; текст и дата события не проверены",
+      "source": "kamtoday.ru",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQeVVqZ3VvZ1BHeDI1NkRhcDdkX21zaHFxN2RWc1FFeS14ajFtaHQ5b09WemthTm00ZEJMWExlaUkwR0dOWWVxeTVnOTViZ0k5V0ltSUR1SVRzUTh1NWRWc25WblZSMVdDa1hCLUZUWlFfVWZmWjFNak9FcVlmdmplbFMyOEJ5cHNteW5Jd0xaN2l3anIzeldiaDdadWJZbWE4V29vR1ZzSXJQbE1xVDZiYnVfTE5QWDBwUDhOVmIwelA?oc=5"
     },
     {
       "id": "curated-23734d9fce7cff05",
@@ -6908,5 +6960,5 @@
       "sourceUrl": "https://www.interfax.ru/russia/70963"
     }
   ],
-  "lastSearchAt": "2026-09-24T19:20:33+00:00"
+  "lastSearchAt": "2026-09-24T23:33:44+00:00"
 }
