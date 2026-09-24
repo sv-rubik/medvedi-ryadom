@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1520" />
+    <meta name="description" content="Новости о медведях: охрана, популяция, решения властей и другие материалы без привязки к точкам нападений." />
+    <title>Новости о медведях — Медведи рядом</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./news.css" />
+    <script src="./news.js" defer></script>
+  </head>
+  <body class="news-page">
+    <header class="news-header">
+      <a class="news-brand" href="./index.html"><span class="brand-mark" aria-hidden="true">М</span><span>Медведи рядом</span></a>
+      <nav aria-label="Разделы"><a href="./index.html">Карта</a><a href="./history.html">Архив</a><a href="./news.html" aria-current="page">Новости</a><a href="./admin.html">Редактировать</a></nav>
+    </header>
+    <main class="news-main">
+      <div class="eyebrow">Лента</div>
+      <h1>Новости о медведях</h1>
+      <p class="news-intro">Решения властей, численность, охрана и другие новости. Сообщения о встречах с людьми и нападениях показываются на <a href="./index.html">карте</a>.</p>
+      <div class="news-toolbar"><input id="news-search" type="search" placeholder="Поиск по новостям" aria-label="Поиск по новостям" /><span id="news-count" role="status"></span></div>
+      <div id="news-list" class="news-list" aria-live="polite">Загрузка новостей…</div>
+      <p class="news-foot" id="news-updated"></p>
+    </main>
+  </body>
+</html>

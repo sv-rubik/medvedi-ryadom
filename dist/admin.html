@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1520" />
+    <title>Редактирование — Медведи рядом</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./news.css" />
+    <link rel="stylesheet" href="./admin.css" />
+    <script src="./admin.js" defer></script>
+  </head>
+  <body class="news-page">
+    <header class="news-header">
+      <a class="news-brand" href="./index.html"><span class="brand-mark" aria-hidden="true">М</span><span>Медведи рядом</span></a>
+      <nav aria-label="Разделы"><a href="./index.html">Карта</a><a href="./history.html">Архив</a><a href="./news.html">Новости</a><a href="./admin.html" aria-current="page">Редактировать</a></nav>
+    </header>
+    <main class="news-main admin-main">
+      <div class="eyebrow">Управление данными</div>
+      <h1>Редактирование</h1>
+      <p class="news-intro">Исправляйте карточки карты и новости. Для записи нужен <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">GitHub fine-grained token</a> для репозитория <strong>sv-rubik/medvedi-ryadom</strong> с правом <strong>Contents: Read and write</strong>. Токен остаётся только в памяти этой вкладки.</p>
+      <div class="admin-login"><label for="token">GitHub-токен</label><input id="token" type="password" autocomplete="off" placeholder="github_pat_…" /><button id="connect" type="button">Открыть данные</button></div>
+      <p id="admin-status" class="admin-status" role="status"></p>
+      <div id="admin-workspace" hidden>
+        <div class="admin-tabs"><button id="tab-events" type="button" class="active">Точки карты</button><button id="tab-history" type="button">Архив</button><button id="tab-news" type="button">Новости</button><button id="promote-item" type="button" hidden>→ На карту</button><button id="add-item" type="button">+ Добавить</button></div>
+        <label for="admin-search">Найти запись</label><input id="admin-search" type="search" placeholder="Заголовок, источник или место" />
+        <div class="admin-grid"><div id="admin-list" class="admin-list" role="list"></div><form id="admin-form" class="admin-form">
+          <input type="hidden" name="id" />
+          <label>Заголовок<input name="title" required /></label>
+          <label>Дата события или публикации<input name="date" type="date" required /></label>
+          <div id="event-fields">
+            <label>Тип<select name="type"><option value="sighting">Выход к людям</option><option value="attack">Нападение</option></select></label>
+            <label>Место<input name="place" /></label>
+            <label>Регион<input name="region" /></label>
+            <div class="admin-pair"><label>Широта<input name="latitude" type="number" step="any" /></label><label>Долгота<input name="longitude" type="number" step="any" /></label></div>
+            <label>Точность точки<input name="precision" /></label>
+            <label>Статус<input name="status" /></label>
+            <label>Основа даты<select name="dateBasis"><option value="event">Дата события проверена</option><option value="publication">Только дата публикации</option></select></label>
+          </div>
+          <label>Текст карточки<textarea name="summary" rows="7" required></textarea></label>
+          <label>Источник<input name="source" required /></label>
+          <label>Ссылка на публикацию<input name="sourceUrl" type="url" required /></label>
+          <div class="admin-buttons"><button type="submit">Сохранить</button><button id="delete-item" type="button" class="danger">Удалить</button></div>
+        </form></div>
+      </div>
+    </main>
+  </body>
+</html>

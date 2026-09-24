@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1520" />
+    <title>Архив публикаций — Медведи рядом</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./news.css" />
+    <script src="./history.js" defer></script>
+  </head>
+  <body class="news-page">
+    <header class="news-header">
+      <a class="news-brand" href="./index.html"><span class="brand-mark" aria-hidden="true">М</span><span>Медведи рядом</span></a>
+      <nav aria-label="Разделы"><a href="./index.html">Карта</a><a href="./history.html" aria-current="page">Архив</a><a href="./news.html">Новости</a><a href="./admin.html">Редактировать</a></nav>
+    </header>
+    <main class="news-main">
+      <div class="eyebrow">Исторический поиск</div>
+      <h1>Архив сообщений</h1>
+      <p class="news-intro">Здесь собраны заголовки публикаций о встречах с медведями и нападениях, найденные при первоначальном поиске. Для многих записей известна только дата публикации. После уточнения места и подробностей событие можно добавить на <a href="./index.html">карту</a>.</p>
+      <div class="news-toolbar"><input id="history-search" type="search" placeholder="Поиск по архиву" aria-label="Поиск по архиву" /><select id="history-year" aria-label="Год публикации"></select><span id="history-count" role="status"></span></div>
+      <div id="history-list" class="news-list" aria-live="polite">Загрузка архива…</div>
+      <p id="history-updated" class="news-foot"></p>
+    </main>
+  </body>
+</html>
