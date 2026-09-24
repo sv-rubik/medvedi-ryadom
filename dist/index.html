@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1520" />
+    <meta name="description" content="Карта опубликованных сообщений о встречах с медведями и нападениях на людей. Архив с 1991 года пополняется." />
+    <title>Медведи рядом — карта сообщений</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1520'/%3E%3Cpath d='M15 43 25 19l8 15 7-12 10 21H15Z' fill='%235ed4ab'/%3E%3Ccircle cx='46' cy='15' r='5' fill='%23ffb448'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://tiles.openfreemap.org" crossorigin />
+    <link href="https://unpkg.com/maplibre-gl@6.11.1/dist/maplibre-gl.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/maplibre-gl@6.11.1/dist/maplibre-gl.js" defer></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark" aria-hidden="true">М</span><div><strong>Медведи рядом</strong><small>Карта сообщений</small></div></div>
+        <label class="top-search"><span class="search-symbol" aria-hidden="true">⌕</span><span class="sr-only">Найти сообщение по месту</span><input id="search" type="search" placeholder="Найти место или сообщение" autocomplete="off" /></label>
+        <div class="top-actions">
+          <label class="year-control" for="year"><span>Год события</span><select id="year" aria-label="Год события"></select></label>
+          <button type="button" class="about-trigger" id="about-trigger" aria-expanded="false" aria-controls="about-panel">О карте</button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <div id="map" role="region" aria-label="Карта сообщений о медведях"></div>
+        <div id="map-error" class="map-error" role="status" hidden>Карта сейчас не загрузилась. Список сообщений доступен ниже.</div>
+        <div class="map-vignette" aria-hidden="true"></div>
+        <aside class="filters" aria-label="Фильтры карты">
+          <div class="filter-heading">Показывать на карте</div>
+          <label class="filter-row"><span class="legend-icon sighting" aria-hidden="true">▲</span><span>Выходы к людям</span><input type="checkbox" id="filter-sighting" checked /></label>
+          <label class="filter-row"><span class="legend-icon attack" aria-hidden="true">●</span><span>Нападения</span><input type="checkbox" id="filter-attack" checked /></label>
+          <div class="filter-footer" id="filter-count">Загрузка сообщений…</div>
+        </aside>
+        <div class="map-navigation"><button type="button" id="zoom-in" aria-label="Увеличить карту">+</button><button type="button" id="zoom-out" aria-label="Уменьшить карту">−</button></div>
+        <section class="detail-panel" id="detail-panel" aria-label="Подробности сообщения" hidden>
+          <button type="button" class="close-detail" id="close-detail" aria-label="Закрыть сообщение">×</button>
+          <div id="detail-content"></div>
+        </section>
+        <section class="about-panel" id="about-panel" aria-label="О карте" hidden>
+          <button type="button" class="close-detail" id="close-about" aria-label="Закрыть">×</button>
+          <div class="eyebrow">О карте</div>
+          <h2>Что означают точки</h2>
+          <p>Это сообщения из открытых публикаций о встречах людей с медведями и нападениях. Ссылка на публикацию и статус указаны в карточке каждого случая.</p>
+          <p>Если точное место неизвестно, точка стоит в центре упомянутого населённого пункта. Она не показывает местонахождение медведя сейчас.</p>
+          <p id="coverage-note">Архив с 1991 года пополняется. Отсутствие точки не означает отсутствие случаев.</p>
+          <p class="about-updated" id="updated-at"></p>
+        </section>
+        <div class="bottom-drawer" aria-label="Сообщения за выбранный год">
+          <div class="bottom-head"><div><span class="eyebrow">Хроника</span><h1 id="list-heading">Сообщения за год</h1></div><span id="list-count" class="list-count"></span></div>
+          <div id="event-list" class="event-list" role="list" aria-live="polite"></div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
